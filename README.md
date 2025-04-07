@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>WAPH Team Project - Sprint 0</title>
+ 
 </head>
 <body>
   <h1>WAPH - Web Application Programming and Hacking</h1>
@@ -96,5 +95,4 @@
     <tr><td>Example</td><td>Example</td><td>Example</td></tr>
   </table>
 
-</body>
-</html>
+

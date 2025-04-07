@@ -8,7 +8,7 @@
 
   <h2>Team Members</h2>
   <ul>
-    <li>Naga satya phanindra vallabhaneni - vallabhanenin2@udayton.edu</li>
+    <li>Naga Satya Phanindra Vallabhaneni - vallabhanenin2@udayton.edu</li>
     <li>Upendra Dommaraju - dommarajuu1@udayton.edu</li>
     <li>Vignesh Yanamalamanda - yanamalamandav1@udayton.edu</li>
   </ul>

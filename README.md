@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
- 
-</head>
+
 <body>
   <h1>WAPH - Web Application Programming and Hacking</h1>
   <p><strong>Instructor:</strong> Dr. Phu Phung</p>

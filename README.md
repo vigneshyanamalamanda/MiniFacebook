@@ -8,9 +8,9 @@
 
   <h2>Team Members</h2>
   <ul>
-    <li>Member 1 - email@example.com</li>
-    <li>Member 2 - email@example.com</li>
-    <li>Member 3 - email@example.com</li>
+    <li>Naga satya phanindra vallabhaneni - vallabhanenin2@udayton.edu</li>
+    <li>Upendra Dommaraju - dommarajuu1@udayton.edu</li>
+    <li>Vignesh Yanamalamanda - yanamalamandav1@udayton.edu</li>
   </ul>
 
   <h2>Project Management Information</h2>

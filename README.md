@@ -71,6 +71,7 @@
 <ul>
   <li>Naga Satya: 10 commits, 15 hours - focused on backend setup and initial security measures.</li>
   <li>Upendra: 8 commits, 12 hours - worked on frontend initial setup and design mockups.</li>
+  <li>Vignesh Yanamalamanda: 9 commits, 14 hours - responsible for setting up the database architecture, including the initial schema and security configurations.</li>
 </ul>
 
 <h3>Sprint Retrospection</h3>

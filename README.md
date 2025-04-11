@@ -79,3 +79,11 @@
   <tr><th>Good</th><th>Could have been better</th><th>How to improve?</th></tr>
   <tr><td>Effective team collaboration</td><td>Initial setup took longer than expected</td><td>Streamline environment setup for future projects</td></tr>
 </table>
+
+## Screenshot Demo
+
+![Screenshot Demo](https://drive.google.com/uc?export=view&id=1HRDGYTv8llbB46eDDsuDCPX9CohnzLzZ)  
+*(Running on HTTPS team's local domain from my local VM)*
+
+[Click here to view full screenshot on Google Drive](https://drive.google.com/file/d/1HRDGYTv8llbB46eDDsuDCPX9CohnzLzZ/view?usp=drive_link)
+

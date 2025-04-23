@@ -1,63 +1,62 @@
 <?php
 session_start();
 
-// Enable error reporting for debugging (disable this in production)
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+require_once "db.php";
 
-// Database connection settings directly included
-$host = 'localhost';
-$user = 'WAPHTEAM1';
-$password = 'teamproject';
-$dbname = 'waph_team';
-
-$mysqli = new mysqli($host, $user, $password, $dbname);
-if ($mysqli->connect_error) {
-    die('Connect Error (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error);
+if (isset($_SESSION["authenticated"]) && $_SESSION["authenticated"] === true) {
+    header("Location: profile.php");
+    exit();
 }
 
-function checkLogin($username, $password, $mysqli) {
-    // Prepare SQL to prevent SQL injection
-    /*$stmt = $mysqli->prepare("SELECT password FROM users WHERE username = ?");
-    if (!$stmt) {
-        echo "Prepare failed: (" . $mysqli->errno . ") " . $mysqli->error;
-        exit();
-    }
+$error = "";
 
-    $stmt->bind_param("s", $username);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
+    $password = md5($_POST['password']); // MD5 hash
+
+    $stmt = $mysqli->prepare("SELECT id FROM users WHERE username=? AND password=?");
+    $stmt->bind_param("ss", $username, $password);
     $stmt->execute();
     $stmt->store_result();
 
-    if ($stmt->num_rows == 1) {
-        $stmt->bind_result($hashed_password);
+    if ($stmt->num_rows === 1) {
+        $stmt->bind_result($user_id);
         $stmt->fetch();
 
-        // Use password_verify to check the hashed password.
-        if (password_verify($password, $hashed_password)) {
-            $stmt->close();
-            return true;
-        }
-    }
-
-    $stmt->close();
-    return false;*/
-    $sql = "SELECT * FROM users WHERE username='" . $username . "' ";
-    $sql = $sql . " AND password = md5('" . $password . "')";
-    echo "DEBUG>sql=$sql";
-    $result = $mysqli->query($sql);
-    if($result->num_rows ==1) return TRUE;
-    return FALSE;
-}
-
-if (!empty($_POST['username']) && !empty($_POST['password'])) {
-    if (checkLogin($_POST['username'], $_POST['password'], $mysqli)) {
-        echo "<h2>Welcome " . htmlspecialchars($_POST['username']) . "!</h2>";
+        $_SESSION["authenticated"] = true;
+        $_SESSION["user_id"] = $user_id;
+        $_SESSION["username"] = $username;
+        header("Location: profile.php");
+        exit();
     } else {
-        echo "<script>alert('Invalid username/password'); window.location='form.php';</script>";
+        $error = "Invalid username or password.";
     }
-} else {
-    // Prompt user to fill in the login form if data is not submitted
-    header("Location: form.php");
-    exit();
 }
+
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - miniFacebook</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header><h1>Login to miniFacebook</h1></header>
+<form method="post" action="">
+    <div class="form-group">
+        <label>Username:</label>
+        <input type="text" name="username" required>
+    </div>
+    <div class="form-group">
+        <label>Password:</label>
+        <input type="password" name="password" required>
+    </div>
+    <button type="submit">Login</button>
+    <?php if ($error): ?>
+        <div class="alert error"><?= htmlspecialchars($error) ?></div>
+    <?php endif; ?>
+</form>
+<p>Don't have an account? <a href="registration.php" class="fancy-btn">Register here</a>.</p>
+</body>
+</html>

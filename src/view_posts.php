@@ -1,5 +1,6 @@
 <?php
 include 'header.php';
+require_once 'db.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['post_content'])) {
     $content = trim($_POST['post_content']);
@@ -13,6 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['post_content'])) {
     }
 }
 
+// Fetch posts
 $result = $mysqli->query("SELECT username, content, created_at FROM posts ORDER BY created_at DESC");
 ?>
 

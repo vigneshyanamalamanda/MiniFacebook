@@ -74,7 +74,7 @@
 
 <h4>Contributions:</h4>
 <ul>
-  <li>Naga Satya: 10 commits, 15 hours - backend setup and basic authentication</li>
+  <li>Naga Satya: 8 commits, 15 hours - backend setup and basic authentication</li>
   <li>Upendra: 8 commits, 12 hours - frontend CSS structure and initial login UI</li>
   <li>Vignesh Yanamalamanda: 9 commits, 14 hours - database schema and session design</li>
 </ul>

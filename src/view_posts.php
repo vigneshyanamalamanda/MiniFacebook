@@ -1,6 +1,5 @@
 <?php
 include 'header.php';
-require_once 'db.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['post_content'])) {
     $content = trim($_POST['post_content']);

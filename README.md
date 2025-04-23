@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>miniFacebook - Project README</title>
+</head>
+<body>
 <h1>WAPH - Web Application Programming and Hacking</h1>
 <p><strong>Instructor:</strong> Dr. Phu Phung</p>
 
@@ -12,7 +19,7 @@
 </ul>
 
 <h2>Project Management Information</h2>
-<p><strong>Source code repository (private access):</strong> https://bitbucket.org/waph-s25-team1/waph-teamproject</p>
+<p><strong>Source code repository (private):</strong> https://bitbucket.org/waph-s25-team1/waph-teamproject</p>
 <p><strong>Project homepage (public):</strong> https://waph-s25-team1.bitbucket.io</p>
 
 <h2>Revision History</h2>
@@ -22,68 +29,78 @@
 </table>
 
 <h2>Overview</h2>
-<p>This project aims to develop a web application that simulates basic functionalities of Facebook with a strong emphasis on security. The application will feature user authentication, real-time messaging, and content management functionalities. A high-level architecture diagram will be added to visually represent these components.</p>
+<p>This project simulates basic Facebook functionalities with an emphasis on security and usability. It features user login/registration, profile editing, posting, and viewing posts securely.</p>
 
 <h2>System Analysis</h2>
-<p><strong>High-level Requirements:</strong></p>
 <ul>
-  <li>Secure user authentication and authorization.</li>
-  <li>Real-time messaging between users.</li>
-  <li>User ability to manage personal content securely.</li>
+  <li>Secure user authentication and session management</li>
+  <li>Database-backed post creation and display</li>
+  <li>User account editing and password update</li>
 </ul>
 
 <h2>System Design</h2>
-<p>Design will be elaborated starting from Sprint 1 and updated continuously as the project evolves.</p>
+<ul>
+  <li>Backend: PHP (secure coding practices)</li>
+  <li>Frontend: HTML/CSS</li>
+  <li>Database: MySQL</li>
+</ul>
 
 <h2>Use-Case Realization</h2>
 <h3>Database</h3>
-<p>The database will use a relational schema to store user data, posts, and messages, ensuring data integrity and supporting efficient queries.</p>
+<p>Normalized schema for <code>users</code> and <code>posts</code> with proper relationships and constraints.</p>
 <h3>User Interface</h3>
-<p>The user interface will be clean and intuitive, enabling easy navigation and access to all features, with specific attention to usability and security.</p>
+<p>Simplified forms and navigable design using CSS styling with button-based headers.</p>
 
 <h2>Implementation</h2>
-<p>Implementation details will be updated starting from Sprint 1, but the environment setup and preliminary technology choices are prepared in Sprint 0.</p>
-<p>We will use PHP for the backend, React for the frontend, and MySQL for the database. Initial setup includes configuring a development environment, establishing a version control system, and setting up a continuous integration pipeline.</p>
+<p>Local LAMP stack with HTTPS. Functionalities implemented through individual PHP scripts. Git and Bitbucket used for version control.</p>
 
 <h2>Security Analysis</h2>
 <ul>
-  <li>Applied security principles include input validation, parameterized queries, and encrypted communications.</li>
-  <li>Database security is ensured through the use of roles and permissions to control access.</li>
-  <li>Defenses against XSS and SQL Injection are implemented via sanitizing inputs and using ORM techniques respectively.</li>
-  <li>Role separation is achieved through differentiated user permissions in the database schema and code logic.</li>
+  <li>MD5 password hashing (per assignment requirement)</li>
+  <li>SQL injection prevention using prepared statements</li>
+  <li>Session authentication across pages</li>
+  <li>XSS protection using HTML escaping and proper output handling</li>
 </ul>
 
-<h2>Demo (Screenshots)</h2>
-<p>Screenshots will be added to demonstrate each major functionality, accompanied by a brief description to illustrate the application flow and security features.</p>
+<h2>Demo</h2>
+<img src="https://drive.google.com/uc?export=view&id=1HRDGYTv8llbB46eDDsuDCPX9CohnzLzZ" width="600" alt="Demo Screenshot"/>
+<p><a href="https://drive.google.com/file/d/1HRDGYTv8llbB46eDDsuDCPX9CohnzLzZ/view?usp=drive_link">View full-size screenshot</a></p>
 
 <h2>Software Process Management</h2>
-<p>Our team uses the Scrum methodology with two-week sprints. Tasks are assigned during sprint planning meetings, and progress is reviewed in daily stand-ups and sprint reviews.</p>
+<p>Agile development with 2-week sprints, daily standups, and task division using Scrum methodology.</p>
 
 <h3>Sprint 0</h3>
-<p><strong>Duration:</strong> 04/06/2025 - [End Date]</p>
-<p><strong>Completed Tasks:</strong></p>
+<p><strong>Duration:</strong> 04/06/2025 - 04/20/2025</p>
 <ul>
-  <li>Project setup on Bitbucket</li>
-  <li>Initial development environment configuration</li>
+  <li>Bitbucket project setup</li>
+  <li>Local development environment and SSL certificate configuration</li>
 </ul>
 
 <p><strong>Contributions:</strong></p>
 <ul>
-  <li>Naga Satya: 10 commits, 15 hours - focused on backend setup and initial security measures.</li>
-  <li>Upendra: 8 commits, 12 hours - worked on frontend initial setup and design mockups.</li>
-  <li>Vignesh Yanamalamanda: 9 commits, 14 hours - responsible for setting up the database architecture, including the initial schema and security configurations.</li>
+  <li>Naga Satya: 10 commits, 15 hours - backend setup and basic authentication</li>
+  <li>Upendra: 8 commits, 12 hours - frontend CSS structure and initial login UI</li>
+  <li>Vignesh Yanamalamanda: 9 commits, 14 hours - database schema and session design</li>
 </ul>
 
-<h3>Sprint Retrospection</h3>
+<h3>Sprint 1</h3>
+<p><strong>Duration:</strong> 04/21/2025 - 05/04/2025</p>
+<ul>
+  <li>Added fields to registration: full name, email, phone, username</li>
+  <li>Completed addnewuser.php backend logic with MD5 hash</li>
+  <li>Built secure login system with session-based access</li>
+  <li>Implemented user profile editing and password change</li>
+  <li>Created post form + display logic in view_posts.php</li>
+  <li>Refined UI with stylized header, buttons, and navigation</li>
+</ul>
+
+<p><strong>Contributions:</strong></p>
 <table border="1">
-  <tr><th>Good</th><th>Could have been better</th><th>How to improve?</th></tr>
-  <tr><td>Effective team collaboration</td><td>Initial setup took longer than expected</td><td>Streamline environment setup for future projects</td></tr>
+<tr><th>Name</th><th>Commits</th><th>Hours</th><th>Work Done</th></tr>
+<tr><td>Naga Satya</td><td>10</td><td>15</td><td>Posts table, view_posts page, logout</td></tr>
+<tr><td>Upendra</td><td>8</td><td>12</td><td>UI buttons, CSS design enhancements, cookie security</td></tr>
+<tr><td>Vignesh</td><td>15</td><td>20</td><td>Registration, session_auth, db integration, post creation logic, and overall debugging</td></tr>
 </table>
 
-## Screenshot Demo
-
-![Screenshot Demo](https://drive.google.com/uc?export=view&id=1HRDGYTv8llbB46eDDsuDCPX9CohnzLzZ)  
-*(Running on HTTPS team's local domain from my local VM)*
-
-[Click here to view full screenshot on Google Drive](https://drive.google.com/file/d/1HRDGYTv8llbB46eDDsuDCPX9CohnzLzZ/view?usp=drive_link)
-
+</body>
+</html>

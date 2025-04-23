@@ -94,6 +94,6 @@
 <table>
   <tr><th>Name</th><th>Commits</th><th>Hours</th><th>Work Done</th></tr>
   <tr><td>Naga Satya</td><td>10</td><td>15</td><td>Posts table, view_posts page, logout</td></tr>
-  <tr><td>Upendra</td><td>8</td><td>12</td><td>UI buttons, session_auth, cookie security</td></tr>
+  <tr><td>Upendra</td><td>12</td><td>12</td><td>UI buttons, session_auth, cookie security,changepasswordform, changepassword</td></tr>
   <tr><td>Vignesh</td><td>15</td><td>20</td><td>Registration, CSS design enhancements, DB integration, post creation logic, and overall debugging</td></tr>
 </table>

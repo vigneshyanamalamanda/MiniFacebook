@@ -77,3 +77,4 @@ if (session_status() === PHP_SESSION_NONE) {
     </header>
 </body>
 </html>
+

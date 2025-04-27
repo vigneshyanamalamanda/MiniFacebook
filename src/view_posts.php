@@ -2,20 +2,38 @@
 include 'header.php';
 require_once 'db.php';
 
+require_once 'session_auth.php';
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['post_content'])) {
     $content = trim($_POST['post_content']);
     $user_id = $_SESSION['user_id'];
+
     $username = $_SESSION['username'];
 
     if (!empty($content)) {
         $stmt = $mysqli->prepare("INSERT INTO posts (user_id, username, content) VALUES (?, ?, ?)");
         $stmt->bind_param("iss", $user_id, $username, $content);
+
+    if (!empty($content)) {
+        $stmt = $mysqli->prepare("INSERT INTO posts (user_id, content) VALUES (?, ?)");
+        $stmt->bind_param("is", $user_id, $content);
+
         $stmt->execute();
     }
 }
 
 // Fetch posts
 $result = $mysqli->query("SELECT username, content, created_at FROM posts ORDER BY created_at DESC");
+
+// Fetch posts with usernames
+$result = $mysqli->query("
+    SELECT users.username, posts.content, posts.created_at
+    FROM posts
+    JOIN users ON posts.user_id = users.id
+    ORDER BY posts.created_at DESC
+");
+
 ?>
 
 <!DOCTYPE html>
@@ -45,3 +63,4 @@ $result = $mysqli->query("SELECT username, content, created_at FROM posts ORDER 
     </div>
 </body>
 </html>
+

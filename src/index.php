@@ -60,3 +60,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <p>Don't have an account? <a href="registration.php" class="fancy-btn">Register here</a>.</p>
 </body>
 </html>
+

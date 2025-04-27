@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
 // Destroy session securely
 session_unset();
 session_destroy();
@@ -9,3 +10,5 @@ session_destroy();
 header("Location: form.php");
 exit();
 ?>
+
+

@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>miniFacebook - Project README</title>
-</head>
-
-<body>
   <h1>WAPH - Web Application Programming and Hacking</h1>
   <p><strong>Instructor:</strong> Dr. Phu Phung</p>
 
@@ -61,9 +53,6 @@
     <li>XSS prevention with HTML escaping</li>
   </ul>
 
-  <h2>Demo</h2>
-  <img src="https://drive.google.com/uc?export=view&id=1HRDGYTv8llbB46eDDsuDCPX9CohnzLzZ" width="600" alt="Demo Screenshot" />
-  <p><a href="https://drive.google.com/file/d/1HRDGYTv8llbB46eDDsuDCPX9CohnzLzZ/view?usp=drive_link">View full-size screenshot</a></p>
 
   <h2>Software Process Management</h2>
   <p>Agile development methodology was followed with sprint-based progress, daily standups, and retrospectives.</p>
@@ -116,5 +105,4 @@
       <td>Design database relationships early before sprint coding</td>
     </tr>
   </table>
-</body>
-</html>
+

@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>miniFacebook - Project README</title>
-</head>
 
-<body>
   <h1>WAPH - Web Application Programming and Hacking</h1>
   <p><strong>Instructor:</strong> Dr. Phu Phung</p>
 
@@ -127,5 +120,3 @@
     </tr>
   </table>
 
-</body>
-</html>
